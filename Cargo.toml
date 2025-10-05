@@ -1,6 +1,6 @@
 [package]
 name = "mycli"
-version = "0.5.0"
+version = "0.6.0"
 edition = "2024"
 
 [features]
@@ -8,7 +8,6 @@ default = []
 repl = ["dep:rustyline"]
 args = ["dep:clap"]
 menu = []
-progress = ["dep:indicatif"]
 
 [dependencies]
 rustyline = { version = "17.0", optional = true }

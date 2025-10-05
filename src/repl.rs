@@ -166,7 +166,7 @@ impl <H: CommandHandler> Repl<H> {
     /// let mut repl = Repl::new("> ", MyHandler).unwrap();
     /// let _ = repl.load_history(".my_app_history");
     /// ```
-    pub fn load_history(&mut self, path: &str) -> Result<()> {
+    pub fn load_history(&mut self, path: &Path) -> Result<()> {
         self.editor.load_history(path)
     }
 
@@ -195,7 +195,7 @@ impl <H: CommandHandler> Repl<H> {
     /// // ... run the REPL ...
     /// let _ = repl.save_history(".my_app_history");
     /// ```
-    pub fn save_history(&mut self, path: &str) -> Result<()> {
+    pub fn save_history(&mut self, path: &Path) -> Result<()> {
         self.editor.save_history(path)
     }
 
